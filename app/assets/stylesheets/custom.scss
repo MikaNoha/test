@@ -64,8 +64,8 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
+  font-size: 2em;
+  color: #3399ff;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -80,7 +80,7 @@ p {
 
 footer {
   margin-top: 45px;
-  padding-top: 5px;
+  padding-top: 10px;
   border-top: 1px solid #eaeaea;
   color: #777;
   a {
@@ -272,4 +272,13 @@ span.picture {
   &:hover span.done {
  display: block;
 }
+}
+
+.image{
+  float: middle;
+  display: block;
+}
+
+.action{
+text-align:center;
 }

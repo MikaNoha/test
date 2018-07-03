@@ -1,11 +1,11 @@
 <% if logged_in? %>
   <div class="row">
-    <aside class="col-md-4">
+    <aside class="col-md-3">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
     </aside>
-    <div class="col-md-8">
+    <div class="col-md-9">
       <h3>Task Feeds (<%= @feed_items.count %>)  <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
       </section></h3>
@@ -15,7 +15,7 @@
 <% else %>
 
 <div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+  <h1>Welcome to the DoDo App!</h1>
 
   <h2>
     This is the home page for the
@@ -24,9 +24,11 @@
   </h2>
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<div id="action">
+<img src="assets/dodo_on.png"  >
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
+</div>
+
 
 <% end %>
