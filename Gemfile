@@ -29,10 +29,19 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'will_paginate', '3.1.6'
+gem 'bootstrap-will_paginate', '1.0.0'
+gem 'font-awesome-rails'
+gem 'faker'
+gem 'fog', '1.42'
+gem 'carrierwave', '1.2.2'
+gem 'mini_magick', '4.7.0'
 
 # bootstrap
 gem 'bootstrap-sass', '3.3.7'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'jquery-turbolinks'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

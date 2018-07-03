@@ -1,0 +1,22 @@
+<% provide(:title, "Edit task") %>
+<h1>Update your task</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@micropost) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :content %>
+      <%= f.text_field :content, class: 'form-control' %>
+
+      <%= f.label :deadline%>
+      <%= f.date_select :deadline, {:include_blank => true, :use_month_numbers => true}, {:class => "form-control"} %>
+
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+
+   <%= link_to 'Back', root_url %>
+   </div>
+</div>
+
+

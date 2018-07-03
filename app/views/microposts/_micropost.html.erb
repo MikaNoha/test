@@ -1,0 +1,22 @@
+<li id="micropost-<%= micropost.id %>">
+<div class="icon"><i class="fa fa-crosshairs fa-3x"></i></div>
+ <span class="content">
+     <%= simple_format(micropost.content) %>
+  </span>
+  <% if micropost.deadline != nil %>
+  <span class="deadline">
+   deadline: <%= micropost.deadline.strftime('%Y/%m/%d %H:%M') %>
+  </span>
+  <% end %>
+  <span class="timestamp">
+    Posted <%= micropost.updated_at.strftime('%Y/%m/%d %H:%M')%> 
+    <% if current_user?(micropost.user) %>
+      <%= link_to "delete", micropost, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+      <%= link_to "edit", edit_micropost_path(micropost) %>
+    <% end %>
+    <% if micropost.complete %>
+      完了！
+    <% end %>
+  </span>
+</li>

@@ -14,6 +14,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'  
 }
 
 section {
@@ -63,8 +64,8 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
+  font-size: 2em;
+  color: #3399ff;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -79,7 +80,7 @@ p {
 
 footer {
   margin-top: 45px;
-  padding-top: 5px;
+  padding-top: 10px;
   border-top: 1px solid #eaeaea;
   color: #777;
   a {
@@ -174,4 +175,110 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    word-wrap: break-word;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .icon {
+    display: block;
+    float: left;
+   
+    margin-top: 5px;
+  &:hover {
+    color: #cc0000;
+    font-size: 1.5em;
+    }
+  
+  
+}
+
+  .deadline {
+    color: #ff9900;
+    display: block;
+    margin-left: 60px;
+    font-size:16px;
+  }
+
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+} 
+.postfield{display:none;}
+
+.deadline{display: inline-block;
+  width: auto;}
+
+
+.icon span.done{
+  display: none;
+  &:hover span.done {
+ display: block;
+}
+}
+
+.image{
+  float: middle;
+  display: block;
+}
+
+.action{
+text-align:center;
 }
