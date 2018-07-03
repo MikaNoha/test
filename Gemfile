@@ -40,6 +40,8 @@ gem 'mini_magick', '4.7.0'
 # bootstrap
 gem 'bootstrap-sass', '3.3.7'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'jquery-turbolinks'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

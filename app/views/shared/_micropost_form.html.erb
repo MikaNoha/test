@@ -1,10 +1,20 @@
 <%= form_for(@micropost) do |f| %>
+
+<div class="postbutton"><button type="button" class="btn btn-primary" >Post</button></div>
+<div class="postfield">
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.text_area :content, placeholder: "Compose new post..." %>
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
+
+  <%= f.label :deadline %>
+  <%= f.date_select  :deadline, {:use_month_numbers => true, :include_blank => true, default: Time.now}, {class: "form-control deadline"} %>
+
+  <%= f.submit "Do!", class: "btn btn-warning" %>
+</div>
 <% end %>
+
+
 
 <script type="text/javascript">
   $('#micropost_picture').bind('change', function() {
@@ -13,4 +23,11 @@
       alert('Maximum file size is 5MB. Please choose a smaller file.');
     }
   });
+
+$(function(){ $('.postbutton').on('click', function(){
+   $('.postfield').toggle("slow");
+  
+ });
+});
+
 </script>

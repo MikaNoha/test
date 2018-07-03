@@ -9,7 +9,7 @@ class MicropostsController < ApplicationController
       redirect_to root_url
     else
       @feed_items = []
-      render 'static_pages/home'
+      redirect_to root_url
     end
   end
 
@@ -33,11 +33,10 @@ class MicropostsController < ApplicationController
     end
   end
 
-
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content, :id)
+      params.require(:micropost).permit(:content, :id, :deadline)
     end
 
     def correct_user

@@ -9,6 +9,9 @@
       <%= f.label :content %>
       <%= f.text_field :content, class: 'form-control' %>
 
+      <%= f.label :deadline%>
+      <%= f.date_select :deadline, {:include_blank => true, :use_month_numbers => true}, {:class => "form-control"} %>
+
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
 
