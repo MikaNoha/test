@@ -36,6 +36,7 @@ gem 'faker'
 gem 'fog', '1.42'
 gem 'carrierwave', '1.2.2'
 gem 'mini_magick', '4.7.0'
+gem 'sprockets'
 
 # bootstrap
 gem 'bootstrap-sass', '3.3.7'
